@@ -38,3 +38,8 @@ VALUES	('Ribeirão Preto',26),
 		('Chapecó',25),
         ('Blumenau',25),
         ('Joinville',25);
+
+
+-- 3 Realize a remoção dos estados que não tem cidades
+SELECT UF_ID FROM CIDADE;
+DELETE FROM UF WHERE ID NOT IN (SELECT UF_ID FROM CIDADE);
