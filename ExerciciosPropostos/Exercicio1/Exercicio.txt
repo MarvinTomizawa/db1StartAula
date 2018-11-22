@@ -1,0 +1,2 @@
+transformar numeros em linguagem formal
+1220 -> "Mil duzentos e vinte"
