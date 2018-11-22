@@ -1,0 +1,9 @@
+/*	Select * from cidade;
+	insert into cidade(nome) values('Paranavai');
+    update cidade set nome = 'Maringa' where idCidade = 1 ;
+    delete from cidade where id = 2;
+	desc endereço;
+	insert into endereço(logradouro,tipoLogradouro,numero,Cidade_idCidade) values ('Av','Rio grande do norte',1491,2);
+*/
+
+Select * from cidade inner join endereço on cidade.idCidade = endereço.Cidade_idCidade;
