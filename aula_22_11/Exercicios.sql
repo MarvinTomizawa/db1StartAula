@@ -71,3 +71,21 @@ Select  count(U.nome) as Quantidade, U.nome
 from Cidade as C inner join UF as U
 on C.uf_id = U.id
 group by U.id;
+
+/*8 - Insira tres pessoas na base de dados.
+ Cada uma destas pessoas deve ter dois enderecos (um comercial e outro residencial). 
+ As cidades que devem ser usadas são do estado do PR (você escolhe).*/
+ 
+CREATE TABLE IF NOT EXISTS `mydb`.`PESSOA` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(2) NOT NULL,
+  `cidade_id` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `fk_PESSOA_CIDADE`
+    FOREIGN KEY (`cidade_id`)
+    REFERENCES `mydb`.`CIDADE` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
