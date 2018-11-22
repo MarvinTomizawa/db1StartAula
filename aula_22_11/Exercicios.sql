@@ -48,3 +48,12 @@ DELETE FROM UF WHERE ID NOT IN (SELECT UF_ID FROM CIDADE);
 INSERT INTO CIDADE(NOME , UF_ID) 
 VALUES ('São paulo',26),('Santos',26);
 
+/* 5 Realize a atualização do nome das cidades:
+* Lunardeli para Lunardelli
+* Jandaia do Sul para Jandaia
+* Maringá para Cidade Canção
+*/
+
+update cidade set nome = 'Lunardelli' where nome = 'Lunardeli';
+update cidade set nome = 'Jandaia' where nome = 'Jandaia do Sul';
+update cidade set nome = 'Cidade Canção' where nome = 'Maringá';
