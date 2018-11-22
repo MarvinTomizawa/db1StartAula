@@ -1,0 +1,4 @@
+1- Relembrar os comandos de git.
+2- Modelar nova base de dados de acordo com a imagem do recibo.
+3- Gerar um squema Sql do banco modelado.
+4-
