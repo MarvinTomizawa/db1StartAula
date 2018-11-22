@@ -43,3 +43,8 @@ VALUES	('Ribeirão Preto',26),
 -- 3 Realize a remoção dos estados que não tem cidades
 SELECT UF_ID FROM CIDADE;
 DELETE FROM UF WHERE ID NOT IN (SELECT UF_ID FROM CIDADE);
+
+-- 4 Insira novas cidades no estado de SP
+INSERT INTO CIDADE(NOME , UF_ID) 
+VALUES ('São paulo',26),('Santos',26);
+
