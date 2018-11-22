@@ -64,3 +64,10 @@ Select C.nome, U.nome
 from Cidade as C inner join UF as U
 on C.uf_id = U.id
 order by U.nome and C.nome;
+
+/*7 Retorne quantas cidades cada estado possui :) (não expliquei ainda)
+dica: veja group by e count()*/
+Select  count(U.nome) as Quantidade, U.nome
+from Cidade as C inner join UF as U
+on C.uf_id = U.id
+group by U.id;
