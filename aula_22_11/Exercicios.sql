@@ -57,3 +57,10 @@ VALUES ('São paulo',26),('Santos',26);
 update cidade set nome = 'Lunardelli' where nome = 'Lunardeli';
 update cidade set nome = 'Jandaia' where nome = 'Jandaia do Sul';
 update cidade set nome = 'Cidade Canção' where nome = 'Maringá';
+
+/*6 - Faça um select que retorne o nome das cidades e seus respectivos estados. 
+Ordene por estados e posteriomente pelo nome das cidades */
+Select C.nome, U.nome
+from Cidade as C inner join UF as U
+on C.uf_id = U.id
+order by U.nome and C.nome;
