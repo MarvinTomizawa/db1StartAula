@@ -3,3 +3,38 @@ INSERT INTO UF(NOME) VALUES	('PR'), ('MR'), ('MG'), ('AC'), ('AL'), ('AP'), ('AM
 							('CE'), ('DF'), ('ES'), ('GO'), ('MA'), ('MT'), ('MS'), ('PA'), 
                             ('PB'), ('PE'), ('PI'), ('RJ'), ('RN'), ('RS'), ('RO'), ('RR'),
                             ('SC'), ('SP'), ('SE'), ('TO');
+
+ /*2 insira as seguintes cidades:
+Para o SC
+* Chapecó
+* Blumenau
+* Joinville
+
+Para o PR
+* Curitiba
+* Maringá
+* Lunardeli
+* Apucarana
+* Santa fé
+* São Miguel do Iguaçu
+* Arapongas
+* Ponta Grossa
+* Jandaia do Sul
+
+Para o SP
+*Ribeirão Preto
+*/
+INSERT INTO CIDADE(NOME,UF_ID)
+VALUES	('Ribeirão Preto',26),
+		('Curitiba',1),
+        ('Maringá',1),
+        ('Lunardeli',1),
+        ('Apucarana',1),
+        ('Santa fé',1),
+        ('São Miguel do Iguaçu',1),
+        ('Arapongas',1),
+        ('Ponta Grossa',1),
+        ('Jandaia do Sul',1),
+		('Chapecó',25),
+        ('Blumenau',25),
+        ('Joinville',25);
