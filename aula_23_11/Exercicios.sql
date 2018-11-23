@@ -231,3 +231,26 @@ values
 (3,3),
 (3,5);
 
+/*9 -Insira duas pessoas na base de dados. Cada uma destas pessoas deve ter dois enderecos 
+(um comercial e outro residencial). As cidades que devem ser usadas são do estado de SP (você escolhe).*/
+desc pessoa;
+insert into pessoa(nome)
+values('Fuska'),('Maiko');
+
+
+desc endereco;
+insert into endereco(logradouro,cep,cidade_id,tipo)
+values
+('Av. Advogado Horácio Raccanello Filho',87701020,3,'Comercial'),
+('Rua linda',85451020,3,'Residencial'),
+('Avenida maravilhos',87232020,3,'Residencial');
+
+select * from endereco;
+desc pessoa_has_endereco;
+insert into pessoa_has_endereco(Pessoa_id,Endereco_id)
+values
+(4,6),
+(4,7),
+(5,6),
+(5,8);
+
