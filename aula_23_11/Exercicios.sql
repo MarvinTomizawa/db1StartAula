@@ -361,3 +361,23 @@ select 	distinct r.numero numero, r.dataEmissao data_Emissao, r.valor valor, c.n
             cp.Uf_id = up.id
             
 	order by r.dataEmissao and c.nome and p.nome;
+    
+    
+/*18 - Faça uma consulta que mostre:
+* quantidade de recibos emitidos no PR
+* valor total de recibos emitidos no PR*/
+desc cidade;
+Select count(r.numero) quantidade, sum(r.valor) Valor_total
+	from 	recibo as r 
+			inner join pessoa as c 
+			inner join pessoa_has_endereco as pe
+			inner join endereco as e
+			inner join cidade as cd
+			inner join uf as u
+	
+    where 		r.cliente = c.id 
+			and pe.Pessoa_id = c.id
+            and pe.Endereco_id = e.id
+            and e.Cidade_id = cd.id
+            and cd.Uf_id = u.id
+            and u.nome = 'PR';
