@@ -317,3 +317,10 @@ values
 (2,4,100,NOW());
 
 
+/*16 - Insira dois recibos sendo que eles devem ter clientes residentes no PR e prestadores de serviços diferentes. Exemplo: 
+* cliente fusca, da cidade curitiba, no PR. Prestador: FCV, estado PR.
+* cliente tamara, da cidade maringá, no PR. Prestador: USP, estado SP.*/
+insert into recibo(cliente,cliente_fk,valor,dataEmissao)
+values
+(2,4,1100,NOW()),
+(3,5,1230,NOW());
