@@ -301,3 +301,6 @@ where id = (select p.id from
 desc endereco;
 update endereco set cep = 00000000 where tipo = 'Residencial';
 
+-- 14 - altere o nome da coluna prestador_fk para cliente_fk. 
+desc recibo;
+alter table recibo change prestador cliente_fk int(11);
