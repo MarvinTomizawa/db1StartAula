@@ -324,3 +324,38 @@ insert into recibo(cliente,cliente_fk,valor,dataEmissao)
 values
 (2,4,1100,NOW()),
 (3,5,1230,NOW());
+
+/*17 - Realize uma consulta na base de dados e exiba os seguintes dados:		
+* numero do recibo
+* data emissao do recibo
+* valor do recibo
+* nome do cliente 
+* estado do cliente
+* nome do emitente
+* estado do emitente*/
+desc cidade;
+
+select 	distinct r.numero numero, r.dataEmissao data_Emissao, r.valor valor, c.nome nome_cliente, 
+		uc.nome estado_cliente, p.nome nome_emitente, up.nome estado_emitente
+		from recibo as r 
+        inner join pessoa as c -- Cliente
+        inner join pessoa as p -- Prestador
+        inner join pessoa_has_endereco as phc -- Ligacao cliente
+        inner join pessoa_has_endereco as php -- Ligação prestador
+        inner join endereco as ep -- Endereco do prestador 
+        inner join endereco as ec -- Endereco do cliente
+        inner join cidade as cp -- Cidade prestador
+        inner join cidade as cc -- Cidade cliente
+        inner join uf as uc -- Uf do cliente 
+        inner join uf as up -- Uf do prestador
+        
+	where 	r.cliente = c.id and 
+			r.cliente_fk = p.id and 
+			c.id = phc.Pessoa_id and
+            p.id = php.Pessoa_id and
+            phc.Endereco_id = ec.id and
+            php.Endereco_id = ep.id and
+            ec.Cidade_id = cc.id and
+            ep.Cidade_id = cp.id and
+            cc.Uf_id = uc.id and
+            cp.Uf_id = up.id;
