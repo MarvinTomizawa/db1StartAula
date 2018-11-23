@@ -237,13 +237,13 @@ desc pessoa;
 insert into pessoa(nome)
 values('Fuska'),('Maiko');
 
-
+select * from cidade;
 desc endereco;
 insert into endereco(logradouro,cep,cidade_id,tipo)
 values
-('Av. Advogado Horácio Raccanello Filho',87701020,3,'Comercial'),
-('Rua linda',85451020,3,'Residencial'),
-('Avenida maravilhos',87232020,3,'Residencial');
+('Av. Advogado Horácio Raccanello Filho',87701020,15,'Comercial'),
+('Rua linda',85451020,14,'Residencial'),
+('Avenida maravilhos',87232020,15,'Residencial');
 
 select * from endereco;
 desc pessoa_has_endereco;
