@@ -304,3 +304,16 @@ update endereco set cep = 00000000 where tipo = 'Residencial';
 -- 14 - altere o nome da coluna prestador_fk para cliente_fk. 
 desc recibo;
 alter table recibo change prestador cliente_fk int(11);
+
+/*15 - Insira dois recibos sendo que eles devem ter clientes residentes no PR e o prestador de servico deve ser o mesmo (não importando o estado).
+ Exemplo: 
+* cliente fusca, da cidade curitiba, no PR. Prestador: DB1, estado PR.
+* cliente tamara, da cidade maringá, no PR. Prestador: DB1, estado PR.*/
+desc recibo;
+select * from pessoa;
+insert into recibo(cliente,cliente_fk,valor,dataEmissao)
+values
+(1,4,1200,NOW()),
+(2,4,100,NOW());
+
+
