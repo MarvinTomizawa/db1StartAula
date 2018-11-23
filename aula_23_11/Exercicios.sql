@@ -202,17 +202,32 @@ group by U.id;
 /*8 - Insira tres pessoas na base de dados.
  Cada uma destas pessoas deve ter dois enderecos (um comercial e outro residencial). 
  As cidades que devem ser usadas são do estado do PR (você escolhe).*/
- 
-CREATE TABLE IF NOT EXISTS `mydb`.`PESSOA` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(2) NOT NULL,
-  `cidade_id` INT NOT NULL,
-  PRIMARY KEY (`id`),
-  CONSTRAINT `fk_PESSOA_CIDADE`
-    FOREIGN KEY (`cidade_id`)
-    REFERENCES `mydb`.`CIDADE` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+desc Pessoa;
+insert into Pessoa(nome)
+values
+('Marvin'),
+('Massaru'),
+('Tomizawa'); 
 
+
+desc endereco;
+select * from cidade;
+insert into endereco(logradouro,cep,Cidade_id,tipo)
+values
+('Avenida rio grande do sul',87701020,2,'Comercial'),
+('Avenida rio grande do norte',8770523,3,'Comercial'),
+('Rua linda',87569020,4,'Comercial'),
+('Bairro rico',87897020,2,'Residencial'),
+('Rua perdida',87946020,6,'Residencial');
+
+select * from endereco;
+desc pessoa_has_endereco;
+insert into pessoa_has_endereco(Pessoa_id,Endereco_id)
+values 
+(1,1),
+(1,4),
+(2,2),
+(2,4),
+(3,3),
+(3,5);
 
