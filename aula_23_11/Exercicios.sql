@@ -254,3 +254,18 @@ values
 (5,6),
 (5,8);
 
+/*10 - Insira duas pessoas na base de dados. Cada uma destas pessoas deve ter um endereco do tipo comercial.
+ As cidades que devem ser usadas são do estado de SC (você escolhe).*/
+ desc pessoa;
+ insert into pessoa(nome)
+ values 
+ ('joão pedro'),
+ ('adriano');
+
+select * from cidade;
+desc endereco;
+insert into endereco(logradouro,cep,cidade_id,tipo)
+values
+('Rua maravilinda',88961020,11,'Comercial'),
+('Avenida perdida',88965690,12,'Comercial');
+
