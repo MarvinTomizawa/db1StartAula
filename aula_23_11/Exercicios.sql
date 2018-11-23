@@ -269,3 +269,14 @@ values
 ('Rua maravilinda',88961020,11,'Comercial'),
 ('Avenida perdida',88965690,12,'Comercial');
 
+
+/*11 - Faça um select que retorne o nome das pessoas e seus respectivos enderecos (com cidade e estado). 
+Ordene por nome de pessoa, nome do estado e nome da cidade*/
+desc endereco;
+desc cidade;
+desc uf;
+desc pessoa_has_endereco;
+select p.nome Nome_Pessoa, e.logradouro endereco, e.cep cep, e.tipo tipo, c.nome cidade, u.nome
+from Pessoa as p inner join endereco as e inner join cidade as c inner join uf as u inner join pessoa_has_endereco as pe
+on pe.pessoa_id = p.id and pe.endereco_id = e.id and e.cidade_id = c.id and c.Uf_id = u.id
+order by p.nome and e.logradouro and c.nome;
