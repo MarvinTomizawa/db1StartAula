@@ -358,4 +358,6 @@ select 	distinct r.numero numero, r.dataEmissao data_Emissao, r.valor valor, c.n
             ec.Cidade_id = cc.id and
             ep.Cidade_id = cp.id and
             cc.Uf_id = uc.id and
-            cp.Uf_id = up.id;
+            cp.Uf_id = up.id
+            
+	order by r.dataEmissao and c.nome and p.nome;
