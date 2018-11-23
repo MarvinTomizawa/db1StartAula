@@ -296,3 +296,8 @@ where id = (select p.id from
 						pe.endereco_id = e.id and 
 						e.cidade_id = c.id and 
 						c.nome = 'Ribeirão Preto');
+                        
+-- 13 - Mude todos os endereços residenciais do sistema. Eles devem ter cep 00000000
+desc endereco;
+update endereco set cep = 00000000 where tipo = 'Residencial';
+
