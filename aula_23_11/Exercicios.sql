@@ -269,6 +269,11 @@ values
 ('Rua maravilinda',88961020,11,'Comercial'),
 ('Avenida perdida',88965690,12,'Comercial');
 
+select * from endereco;
+insert into pessoa_has_endereco(Pessoa_id,Endereco_id)
+values
+(6,11),
+(7,12);
 
 /*11 - Faça um select que retorne o nome das pessoas e seus respectivos enderecos (com cidade e estado). 
 Ordene por nome de pessoa, nome do estado e nome da cidade*/
