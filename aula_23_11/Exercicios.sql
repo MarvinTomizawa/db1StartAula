@@ -190,7 +190,7 @@ Ordene por estados e posteriomente pelo nome das cidades */
 Select C.nome, U.nome
 from Cidade as C inner join UF as U
 on C.uf_id = U.id
-order by U.nome and C.nome;
+order by U.nome , C.nome;
 
 /*7 Retorne quantas cidades cada estado possui :) (não expliquei ainda)
 dica: veja group by e count()*/
@@ -284,7 +284,7 @@ desc pessoa_has_endereco;
 select p.nome Nome_Pessoa, e.logradouro endereco, e.cep cep, e.tipo tipo, c.nome cidade, u.nome
 from Pessoa as p inner join endereco as e inner join cidade as c inner join uf as u inner join pessoa_has_endereco as pe
 on pe.pessoa_id = p.id and pe.endereco_id = e.id and e.cidade_id = c.id and c.Uf_id = u.id
-order by p.nome and e.logradouro and c.nome;
+order by p.nome , e.logradouro , c.nome;
 
 
 -- 12 - remova todos as pessoas que tem endereço da cidade de Ribeirão Preto
@@ -349,7 +349,7 @@ select 	distinct r.numero numero, r.dataEmissao data_Emissao, r.valor valor, c.n
         inner join uf as uc -- Uf do cliente 
         inner join uf as up -- Uf do prestador
         
-	where 	r.cliente = c.id and 
+	on 	r.cliente = c.id and 
 			r.cliente_fk = p.id and 
 			c.id = phc.Pessoa_id and
             p.id = php.Pessoa_id and
@@ -360,7 +360,7 @@ select 	distinct r.numero numero, r.dataEmissao data_Emissao, r.valor valor, c.n
             cc.Uf_id = uc.id and
             cp.Uf_id = up.id
             
-	order by r.dataEmissao and c.nome and p.nome;
+	order by r.dataEmissao , c.nome , p.nome;
     
     
 /*18 - Faça uma consulta que mostre:
@@ -375,7 +375,7 @@ Select count(r.numero) quantidade, sum(r.valor) Valor_total
 			inner join cidade as cd
 			inner join uf as u
 	
-    where 		r.cliente = c.id 
+    on 		r.cliente = c.id 
 			and pe.Pessoa_id = c.id
             and pe.Endereco_id = e.id
             and e.Cidade_id = cd.id
