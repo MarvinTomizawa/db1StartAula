@@ -285,3 +285,14 @@ select p.nome Nome_Pessoa, e.logradouro endereco, e.cep cep, e.tipo tipo, c.nome
 from Pessoa as p inner join endereco as e inner join cidade as c inner join uf as u inner join pessoa_has_endereco as pe
 on pe.pessoa_id = p.id and pe.endereco_id = e.id and e.cidade_id = c.id and c.Uf_id = u.id
 order by p.nome and e.logradouro and c.nome;
+
+
+-- 12 - remova todos as pessoas que tem endereço da cidade de Ribeirão Preto
+desc endereco;
+delete from pessoa 
+where id = (select p.id from
+						pessoa as p inner join endereco as e inner join pessoa_has_endereco as pe inner join cidade as c
+                        where p.id = pe.pessoa_id and 
+						pe.endereco_id = e.id and 
+						e.cidade_id = c.id and 
+						c.nome = 'Ribeirão Preto');
