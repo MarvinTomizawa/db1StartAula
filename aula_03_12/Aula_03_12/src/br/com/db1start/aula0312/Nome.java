@@ -33,4 +33,8 @@ public class Nome {
 	public String retornaPrimeirasQuatroLetras(String nome) {
 		return nome.substring(0, 4);
 	}
+	
+	public String retornaAPartirDaTerceiraLetra(String nome) {
+		return nome.substring(3);
+	}
 }

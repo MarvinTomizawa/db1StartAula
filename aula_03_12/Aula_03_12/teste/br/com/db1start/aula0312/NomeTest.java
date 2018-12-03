@@ -51,4 +51,12 @@ public class NomeTest {
 		
 		Assert.assertEquals("Marv", quatroPrimeirasLetras);
 	}
+
+	@Test
+	public void deveRetornaAPartirDaTerceiraLetra() {
+		Nome nome = new Nome();
+		String aPartirDaTerceiraLetra = nome.retornaAPartirDaTerceiraLetra("Marvin Massaru Tomizawa");
+		
+		Assert.assertEquals("vin Massaru Tomizawa", aPartirDaTerceiraLetra);
+	}
 }
