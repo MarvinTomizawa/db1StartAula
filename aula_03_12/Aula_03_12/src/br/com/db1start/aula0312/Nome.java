@@ -41,4 +41,18 @@ public class Nome {
 	public String retornaAsUltimasQuatroLetras(String nome) {
 		return nome.substring(nome.length() - 4);
 	}
+	
+	//9 - FUM que receba o seu nome completo e substitua o seu  primeiro nome por ALUNO/ALUNA
+	public String substuiPrimeiroNomePorAluno(String nome) {
+		String novoNome = "";
+		char[] palavra = nome.toCharArray();
+		for(int x = 0; x < nome.length(); x++) {
+			if(palavra[x] == 32) {
+				novoNome = nome.substring(x);
+				break;
+			}
+		}
+		String nomeSubstituido = "Aluno";
+		return nomeSubstituido.concat(novoNome);
+	}
 }

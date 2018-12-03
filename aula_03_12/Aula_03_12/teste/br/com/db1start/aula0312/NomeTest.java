@@ -67,4 +67,12 @@ public class NomeTest {
 		
 		Assert.assertEquals("zawa", ultimasQuatroLetras);
 	}
+	
+	@Test
+	public void deveSubstuiPrimeiroNomePorAluno() {
+		Nome nome = new Nome();
+		String nomeSubstituido = nome.substuiPrimeiroNomePorAluno("Marvin Massaru Tomizawa");
+		
+		Assert.assertEquals("Aluno Massaru Tomizawa", nomeSubstituido);
+	}
 }
