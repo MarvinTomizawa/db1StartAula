@@ -42,7 +42,6 @@ public class Nome {
 		return nome.substring(nome.length() - 4);
 	}
 	
-	//9 - FUM que receba o seu nome completo e substitua o seu  primeiro nome por ALUNO/ALUNA
 	public String substuiPrimeiroNomePorAluno(String nome) {
 		String novoNome = "";
 		char[] palavra = nome.toCharArray();
@@ -54,5 +53,11 @@ public class Nome {
 		}
 		String nomeSubstituido = "Aluno";
 		return nomeSubstituido.concat(novoNome);
+	}
+	
+	public String[] separaTextos(String nome) {
+		String[] nomeSeparado = new String[5];
+		nomeSeparado = nome.split(",");
+		return nomeSeparado;
 	}
 }

@@ -75,4 +75,14 @@ public class NomeTest {
 		
 		Assert.assertEquals("Aluno Massaru Tomizawa", nomeSubstituido);
 	}
+	
+	@SuppressWarnings("deprecation")
+	@Test
+	public void deveSeparaTextos() {
+		Nome nome = new Nome();
+		String[] nomeSeparado = nome.separaTextos("banana, maçã, melancia");
+		String[] nomesEsperado = {"banana"," maçã"," melancia"};
+		
+		Assert.assertEquals(nomesEsperado, nomeSeparado);
+	}
 }
