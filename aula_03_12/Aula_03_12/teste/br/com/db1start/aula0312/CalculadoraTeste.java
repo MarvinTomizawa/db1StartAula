@@ -21,4 +21,14 @@ public class CalculadoraTeste {
 		Assert.assertEquals(15,resultadoDaSubtracao);
 	}
 	
+	@Test
+	public void deveMultiplicar() {
+		Calculadora calculadora = new Calculadora();
+		int resultadoDaMultiplicacao = calculadora.multiplicar(5, 6);
+		
+		Assert.assertEquals(30, resultadoDaMultiplicacao);
+	}
+	
+	
+	
 }
