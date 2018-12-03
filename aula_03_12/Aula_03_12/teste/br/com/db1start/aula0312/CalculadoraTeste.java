@@ -13,4 +13,12 @@ public class CalculadoraTeste {
 		Assert.assertEquals(25, resultadoDaSoma);
 	}
 	
+	@Test
+	public void deveSubtrair() {
+		Calculadora calculadora = new Calculadora();
+		int resultadoDaSubtracao = calculadora.subtrair(20,5 );
+		
+		Assert.assertEquals(15,resultadoDaSubtracao);
+	}
+	
 }
