@@ -29,4 +29,8 @@ public class Nome {
 	public String retornaSemEspaco(String nome) {
 		return nome.replaceAll(" ", "");
 	}
+	
+	public String retornaPrimeirasQuatroLetras(String nome) {
+		return nome.substring(0, 4);
+	}
 }

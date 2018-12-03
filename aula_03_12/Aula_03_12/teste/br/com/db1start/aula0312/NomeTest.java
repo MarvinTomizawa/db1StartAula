@@ -43,4 +43,12 @@ public class NomeTest {
 		
 		Assert.assertEquals("DB1START", palavraSemEspaco);
 	}
+	
+	@Test 
+	public void deveRetornasAsPrimeirasQuatroLetras() {
+		Nome nome = new Nome();
+		String quatroPrimeirasLetras = nome.retornaPrimeirasQuatroLetras("Marvin Tomizawa");
+		
+		Assert.assertEquals("Marv", quatroPrimeirasLetras);
+	}
 }
