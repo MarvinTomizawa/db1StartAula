@@ -11,4 +11,11 @@ public class NomeTest {
 		String valorTransformado = nome.transformarParaLetraMaiuscula("Teste unitario");
 		Assert.assertEquals("TESTE UNITARIO", valorTransformado);
 	}
+	
+	@Test
+	public void deveRetornarOTamanho() {
+		Nome nome = new Nome();
+		int tamanhoNome = nome.tamanhoDoNome("Teste unitario");
+		Assert.assertEquals(14,tamanhoNome);
+	}
 }
