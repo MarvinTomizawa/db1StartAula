@@ -21,4 +21,8 @@ public class Calculadora {
 	public boolean ehPar(int numero) {
 		return numero % 2 == 0;
 	}
+
+	public int retornaMaior(int numero1, int numero2) {
+		return numero1 > numero2 ? numero1 : numero2;
+	}
 }

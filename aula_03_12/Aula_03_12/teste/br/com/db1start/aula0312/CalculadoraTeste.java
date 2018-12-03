@@ -54,4 +54,11 @@ public class CalculadoraTeste {
 		Assert.assertEquals(false, ehPar);
 	}
 	
+	@Test
+	public void deveRetornarMaior() {
+		Calculadora calculadora = new Calculadora();
+		int maiorNumero = calculadora.retornaMaior(10, 2);
+		
+		Assert.assertEquals(10, maiorNumero);
+	}
 }
