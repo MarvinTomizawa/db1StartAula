@@ -60,4 +60,17 @@ public class Nome {
 		nomeSeparado = nome.split(",");
 		return nomeSeparado;
 	}
+	
+	public int quantidadeDeVogais(String nome) {
+		int quantidade = 0;
+		char[] palavra = nome.toCharArray();
+		
+		for(int x = 0; x <nome.length(); x++) {
+			if(	palavra[x] == 'a'||palavra[x] == 'e'||palavra[x] == 'i'||palavra[x] == 'o'||palavra[x] == 'u'||
+				palavra[x] == 'A'||palavra[x] == 'E'||palavra[x] == 'I'||palavra[x] == 'O'||palavra[x] == 'U') {
+				quantidade++;
+			}
+		}
+		return quantidade;
+	}
 }

@@ -85,4 +85,12 @@ public class NomeTest {
 		
 		Assert.assertEquals(nomesEsperado, nomeSeparado);
 	}
+	
+	@Test
+	public void retornaQuantidadeDeVogais() {
+		Nome nome = new Nome();
+		int quantidadeDeVogais = nome.quantidadeDeVogais("Marvin");
+		
+		Assert.assertEquals(2, quantidadeDeVogais);
+	}
 }
