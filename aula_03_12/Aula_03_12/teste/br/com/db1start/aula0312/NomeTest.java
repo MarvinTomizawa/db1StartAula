@@ -24,7 +24,7 @@ public class NomeTest {
 	@Test
 	public void deveRetornarOTamanho() {
 		Nome nome = new Nome();
-		int tamanhoNome = nome.tamanhoDoNome("Teste unitario");
-		Assert.assertEquals(14,tamanhoNome);
+		int tamanhoNome = nome.tamanhoDoNome("DB1START");
+		Assert.assertEquals(8,tamanhoNome);
 	}
 }
