@@ -17,4 +17,8 @@ public class Calculadora {
 	public float dividir(int numero1, int numero2) {
 		return numero1 / numero2;
 	}
+	
+	public boolean ehPar(int numero) {
+		return numero % 2 == 0;
+	}
 }

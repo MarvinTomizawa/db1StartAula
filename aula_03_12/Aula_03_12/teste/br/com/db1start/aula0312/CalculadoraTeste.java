@@ -38,4 +38,20 @@ public class CalculadoraTeste {
 		
 	}
 	
+	@Test
+	public void deveVerificarSeEhPar() {
+		Calculadora calculadora = new Calculadora();
+		boolean ehPar = calculadora.ehPar(4);
+		
+		Assert.assertEquals(true, ehPar);
+	}
+	
+	@Test
+	public void deveVerificarSeEhImpar() {
+		Calculadora calculadora = new Calculadora();
+		boolean ehPar = calculadora.ehPar(5);
+		
+		Assert.assertEquals(false, ehPar);
+	}
+	
 }
