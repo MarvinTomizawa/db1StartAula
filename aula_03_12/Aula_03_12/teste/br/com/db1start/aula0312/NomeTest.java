@@ -27,4 +27,12 @@ public class NomeTest {
 		int tamanhoNome = nome.tamanhoDoNome("DB1START");
 		Assert.assertEquals(8,tamanhoNome);
 	}
+	
+	@Test 
+	public void deveRetornarQuantidadeDeLetras() {
+		Nome nome = new Nome();
+		int quantidadeDeLetras = nome.retornaQuantidadeDeLetras(" DB1START ");
+		
+		Assert.assertEquals(8, quantidadeDeLetras);
+	}
 }
