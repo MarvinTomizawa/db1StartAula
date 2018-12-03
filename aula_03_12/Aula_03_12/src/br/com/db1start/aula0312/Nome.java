@@ -37,4 +37,8 @@ public class Nome {
 	public String retornaAPartirDaTerceiraLetra(String nome) {
 		return nome.substring(3);
 	}
+	
+	public String retornaAsUltimasQuatroLetras(String nome) {
+		return nome.substring(nome.length() - 4);
+	}
 }

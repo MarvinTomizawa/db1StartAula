@@ -59,4 +59,12 @@ public class NomeTest {
 		
 		Assert.assertEquals("vin Massaru Tomizawa", aPartirDaTerceiraLetra);
 	}
+	
+	@Test
+	public void deveRetornaAsUltimasQuatroLetras() {
+		Nome nome = new Nome();
+		String ultimasQuatroLetras = nome.retornaAsUltimasQuatroLetras("Marvin Massaru Tomizawa");
+		
+		Assert.assertEquals("zawa", ultimasQuatroLetras);
+	}
 }
