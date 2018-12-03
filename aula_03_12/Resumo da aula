@@ -1,0 +1,16 @@
+Testes unitarios com JUnity:
+
+Colocar "@Test" antes do nome da classe que for criada para adiciona-la na execução do jUnity.
+
+importar o "import org.junit.Test" para poder realizar o chamado de teste.
+
+importar o "import org.junit.Assert" para realizar comparações e verificar se foi aceito o teste.  
+
+Para criar um teste primeiro deve-se possuir uma função e classe que será testado.
+Após criar é necessário criar uma nova classe de teste para aquela função e criar tambem a função a ser testada: Exemplo :
+
+Classe : Nome.
+Função : tamanhoNome.
+
+Classe Teste: NomeTest.
+Função Teste: retornaTamanhoNome.
