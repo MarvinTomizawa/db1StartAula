@@ -29,6 +29,13 @@ public class CalculadoraTeste {
 		Assert.assertEquals(30, resultadoDaMultiplicacao);
 	}
 	
-	
+	@Test
+	public void deveDividir() {
+		Calculadora calculadora = new Calculadora();
+		float resultadoDaDivisao = calculadora.dividir(10, 5);
+		
+		Assert.assertEquals(2f, resultadoDaDivisao, 0.001 );
+		
+	}
 	
 }
