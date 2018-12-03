@@ -25,4 +25,19 @@ public class Calculadora {
 	public int retornaMaior(int numero1, int numero2) {
 		return numero1 > numero2 ? numero1 : numero2;
 	}
+	
+	public int[] retornaImpares(int valorInicial) {
+		int[] impares = new int[50];
+		int contador = 0;
+		
+		valorInicial = valorInicial %2 == 0 ? valorInicial +1 : valorInicial;
+		
+		for(int x = valorInicial; x < 100; x = x+2) {
+			impares[contador] = x;
+			contador++;
+		}
+		
+		return impares;
+	}
+	
 }

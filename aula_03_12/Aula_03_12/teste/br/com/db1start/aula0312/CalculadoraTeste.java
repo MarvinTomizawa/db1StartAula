@@ -61,4 +61,18 @@ public class CalculadoraTeste {
 		
 		Assert.assertEquals(10, maiorNumero);
 	}
+	
+	@Test
+	public void deveRetornarImpares() {
+		Calculadora calculadora = new Calculadora();
+		int[] impares = calculadora.retornaImpares(90);
+		
+		int[] esperados = new int[50];
+		
+		for(int x = 0; x < 5; x++) {
+			esperados[x] = 91 + (x * 2);
+		}
+		
+		Assert.assertArrayEquals(esperados, impares);
+	}
 }
