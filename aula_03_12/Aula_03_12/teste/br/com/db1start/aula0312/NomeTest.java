@@ -13,6 +13,15 @@ public class NomeTest {
 	}
 	
 	@Test
+	public void deveTransformarParaMinusculo() {
+		Nome nome = new Nome();
+		String nomeMinusculo = nome.transformarParaLetraMinuscula("TESTE UNITARIO");
+		
+		Assert.assertEquals("teste unitario", nomeMinusculo);
+		
+	}
+	
+	@Test
 	public void deveRetornarOTamanho() {
 		Nome nome = new Nome();
 		int tamanhoNome = nome.tamanhoDoNome("Teste unitario");

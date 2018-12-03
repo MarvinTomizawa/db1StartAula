@@ -6,6 +6,10 @@ public class Nome {
 		return nome.toUpperCase();
 	}
 	
+	public String transformarParaLetraMinuscula(String nome) {
+		return nome.toLowerCase();
+	}
+	
 	public int tamanhoDoNome(String nome) {
 		return nome.length();
 	}
