@@ -73,4 +73,16 @@ public class Nome {
 		}
 		return quantidade;
 	}
+	
+	public char[] devolverInvertido(String nome) {
+		char[] novoNome = new char[nome.length()];
+		char[] palavra = nome.toCharArray();
+		int contador = 0;
+		
+		for(int x = nome.length()-1 ; x>=0; x--) {
+			novoNome[contador] = palavra[x];
+		}
+		
+		return novoNome;
+	}
 }
