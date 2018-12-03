@@ -35,4 +35,12 @@ public class NomeTest {
 		
 		Assert.assertEquals(8, quantidadeDeLetras);
 	}
+	
+	@Test
+	public void deveRetornarSemEspaco() {
+		Nome nome = new Nome();
+		String palavraSemEspaco = nome.retornaSemEspaco(" DB1START ");
+		
+		Assert.assertEquals("DB1START", palavraSemEspaco);
+	}
 }

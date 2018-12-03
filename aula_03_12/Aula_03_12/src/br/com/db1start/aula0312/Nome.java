@@ -25,4 +25,8 @@ public class Nome {
 		}
 		return quantidade;
 	}
+	
+	public String retornaSemEspaco(String nome) {
+		return nome.replaceAll(" ", "");
+	}
 }
