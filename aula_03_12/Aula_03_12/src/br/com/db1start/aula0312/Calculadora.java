@@ -45,5 +45,9 @@ public class Calculadora {
 	}
 	
 	
+	public double menorValorDouble(double valor1, double valor2, double valor3) {
+		double menorValorEntreOsPrimeiros = valor1 < valor2 ? valor1 : valor2;
+		return menorValorEntreOsPrimeiros < valor3 ? menorValorEntreOsPrimeiros : valor3;
+	}
 	
 }
