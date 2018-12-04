@@ -49,5 +49,9 @@ public class Calculadora {
 		double menorValorEntreOsPrimeiros = valor1 < valor2 ? valor1 : valor2;
 		return menorValorEntreOsPrimeiros < valor3 ? menorValorEntreOsPrimeiros : valor3;
 	}
-	
+
+
+	public double calculaMedia(double valor1, double valor2, double valor3) {
+		return (valor1 + valor2 + valor3) / 3;
+	}
 }

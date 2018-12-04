@@ -84,10 +84,19 @@ public class CalculadoraTeste {
 		Assert.assertEquals(0.2, menorValor, 0.0);
 	}
 	
-	@Test public void deveRetornarMenorValorDoubleEntreTresValores() {
+	@Test 
+	public void deveRetornarMenorValorDoubleEntreTresValores() {
 		Calculadora calculadora = new Calculadora();
 		double menorValor = calculadora.menorValorDouble(0.3, 0.6, 1);
 		
 		Assert.assertEquals(0.3, menorValor, 0.0);
+	}
+	
+	@Test
+	public void deveCalcularMedia() {
+		Calculadora calculadora = new Calculadora();
+		double mediaCalculada = calculadora.calculaMedia(93.5, 95, 55);
+		
+		Assert.assertEquals(81.16, mediaCalculada, 0.01);
 	}
 }
