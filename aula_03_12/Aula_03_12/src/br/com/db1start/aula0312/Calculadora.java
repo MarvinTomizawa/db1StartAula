@@ -54,4 +54,8 @@ public class Calculadora {
 	public double calculaMedia(double valor1, double valor2, double valor3) {
 		return (valor1 + valor2 + valor3) / 3;
 	}
+	
+	public double calculaAreaTriangulo(double base, double altura) {
+		return (base*altura) / 2;
+	}
 }

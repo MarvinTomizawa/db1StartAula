@@ -99,4 +99,12 @@ public class CalculadoraTeste {
 		
 		Assert.assertEquals(81.16, mediaCalculada, 0.01);
 	}
+	
+	@Test
+	public void deveCalcularAreaDoTriangulo() {
+		Calculadora calculadora = new Calculadora();
+		double areaCalculada = calculadora.calculaAreaTriangulo(4, 4);
+		
+		Assert.assertEquals(8, areaCalculada, 0.001);
+	}
 }
