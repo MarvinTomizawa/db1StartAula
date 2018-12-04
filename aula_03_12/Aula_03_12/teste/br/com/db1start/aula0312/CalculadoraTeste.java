@@ -75,4 +75,13 @@ public class CalculadoraTeste {
 		
 		Assert.assertArrayEquals(esperados, impares);
 	}
+	
+	@Test 
+	public void deveRetornarMenorValorDouble() {
+		Calculadora calculadora = new Calculadora();
+		double menorValor = calculadora.menorValorDouble(0.2, 0.5);
+		
+		Assert.assertEquals(0.2, menorValor, 0.0);
+	}
+	
 }
