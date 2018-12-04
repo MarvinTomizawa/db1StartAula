@@ -97,7 +97,7 @@ public class NomeTest {
 	@Test
 	public void deveDevolverInvertido() {
 		Nome nome = new Nome();
-		char[] nomeInvertido = nome.devolverInvertido("Marvin Tomizawa");
+		String nomeInvertido = nome.devolverInvertido("Marvin Tomizawa");
 		
 		Assert.assertEquals("awazimoT nivraM", nomeInvertido);
 	}
