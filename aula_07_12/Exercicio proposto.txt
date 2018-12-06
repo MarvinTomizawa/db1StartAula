@@ -1,0 +1,2 @@
+https://cdnv2.moovin.com.br/marbig/imagens/produtos/original/recibo-comercial-sem-canhoto-pequeno-50-folhas-img-35192.jpg
+Criar classes e abstrações de acordo com o recibo acima.
