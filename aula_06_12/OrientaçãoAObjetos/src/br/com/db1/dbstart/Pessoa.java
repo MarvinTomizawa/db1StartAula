@@ -1,9 +1,12 @@
 package br.com.db1.dbstart;
 
+import java.util.Date;
+
 public class Pessoa {
 	private String nome;
 	private Double peso;
 	private Integer idade;
+	private Date dataNascimento;
 	
 	public String getNome() {
 		return nome;
@@ -27,6 +30,14 @@ public class Pessoa {
 
 	public void setIdade(Integer idade) {
 		this.idade = idade;
+	}
+
+	public Date getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(Date dataNascimento) {
+		this.dataNascimento = dataNascimento;
 	}
 
 }
