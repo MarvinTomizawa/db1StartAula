@@ -24,4 +24,11 @@ public class CalculadoraTest {
 		int resultado = calculadora.realizaOperacaoMatematica(Operacao.MULTIPLICACAO);
 		Assert.assertEquals( 18, resultado);
 	}
+	
+	@Test
+	public void deveDividir() {
+		Calculadora calculadora = new Calculadora(6,3);
+		int resultado = calculadora.realizaOperacaoMatematica(Operacao.DIVISAO);
+		Assert.assertEquals( 2, resultado);
+	}
 }
