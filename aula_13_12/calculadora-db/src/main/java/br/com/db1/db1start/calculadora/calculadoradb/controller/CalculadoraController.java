@@ -3,6 +3,7 @@ package br.com.db1.db1start.calculadora.calculadoradb.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,6 +14,7 @@ import br.com.db1.db1start.calculadora.calculadoradb.dto.CalculoDTO;
 import br.com.db1.db1start.calculadora.calculadoradb.model.Calculadora;
 import br.com.db1.db1start.calculadora.calculadoradb.service.CalculadoraService;
 
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/api/calculadora")
 public class CalculadoraController {
