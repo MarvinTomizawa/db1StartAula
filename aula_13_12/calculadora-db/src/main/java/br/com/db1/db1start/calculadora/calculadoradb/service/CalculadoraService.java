@@ -16,9 +16,7 @@ public class CalculadoraService {
 	private CalculadoraRepositorio calculadoraRepository;
 	
 	public Calculadora salvaCalculo(double numeroUm , double numeroDois, Operacao operacao) {
-		Calculadora calculadora = new Calculadora(numeroUm,numeroDois,operacao);
-		calculadoraRepository.save(calculadora);
-		return calculadora;
+		return calculadoraRepository.save(new Calculadora(numeroUm,numeroDois,operacao));
 	}
 	
 	public List<Calculadora> pegaTodosOsCalculos(){
