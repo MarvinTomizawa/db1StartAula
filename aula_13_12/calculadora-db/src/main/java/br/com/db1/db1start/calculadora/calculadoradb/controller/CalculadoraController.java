@@ -32,9 +32,3 @@ public class CalculadoraController {
 		return calculadoraService.pegaTodosOsCalculos();
 	}
 }
-/*
-@GetMapping
-public Calculadora salvaCalculadora(@RequestParam("numeroUm") double numeroUm, @RequestParam("numeroDois") double numeroDois, @RequestParam("operacao") Operacao operacao) {
-	Calculadora calculadora = calculadoraService.salvaCalculo(numeroUm, numeroDois, operacao);
-	return calculadora;
-}*/
